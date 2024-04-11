@@ -31,7 +31,7 @@ namespace trainigfuncscale56FA
 
                 myEventsList.Add(new MyEvent
                 {
-                    Name = @event.Body.ToString()
+                    Name =  "Matt"
                 });
             }
 
