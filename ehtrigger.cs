@@ -14,6 +14,9 @@ namespace trainigfuncscale56FA
             _logger = logger;
         }
 
+
+        // ehconnstring will be found in local.settings.json and will not be shown in the GitHub
+        // ehconnstring is the Connection String for the Event Hub Namespace
         [Function(nameof(ehtrigger))]
         public void Run([EventHubTrigger("eventhub3", Connection = "ehconnstring")] EventData[] events)
         {
