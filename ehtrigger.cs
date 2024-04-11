@@ -22,8 +22,11 @@ namespace trainigfuncscale56FA
         [Function(nameof(ehtrigger))]
         public List<MyEvent> Run([EventHubTrigger("%EventHubName%", Connection = "ehconnstring")] EventData[] events)
         {
+            // The EventData[] events, above is the array of events that are received from the Event Hub
             List<MyEvent> myEventsList = new List<MyEvent>();
 
+            // Loop through the events and log the body and content type
+            // and add a new MyEvent object to the list myEventsList
             foreach (EventData @event in events)
             {
                 _logger.LogInformation("Event Body: {body}", @event.Body);
